@@ -19,7 +19,7 @@ const App = () => {
             <TooltipComponent content="Settings" position="Top">
               <button 
               type='button' 
-              className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray'
+              className='text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray'
               style={{background:'blue', borderRadius:'50%'}}>
                 <FiSettings />
               </button>
@@ -34,7 +34,7 @@ const App = () => {
               <Sidebar/>
             </div>
           )}
-          <div className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72':'flex-2' }`}>
+          <div className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72':'flex-2' }`}>
             <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
               <Navbar/>
             </div>
@@ -43,8 +43,8 @@ const App = () => {
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route path='/' element={<Ecommerce/>} />
-              <Route path='/ecommerce' element={<Ecommerce/>} />
+              <Route path='/' element={(<Ecommerce/>)} />
+              <Route path='/ecommerce' element={(<Ecommerce/>)} />
               
               {/* pages */}
               <Route path="/orders" element={<Orders/>} />
